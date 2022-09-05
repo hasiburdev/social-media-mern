@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 8000;
 const app = express();
 
 // Middlewares
-app.use([cors(), morgan("dev")]);
+app.use([cors(), morgan("dev"), express.json()]);
 
 // Routes
 readdirSync("./routes").forEach((fileName) =>
@@ -21,12 +21,11 @@ readdirSync("./routes").forEach((fileName) =>
 );
 app.get("/", (req, res) => res.send("Hello"));
 
-// Database
-
 // Server
 app.listen(PORT, () => {
   console.log(`Listening on port ${PORT}`);
+  // Database
   mongoose.connect(process.env.MONGO_DB_URI, () => {
-    console.log("ok");
+    console.log("MongoDB database connected!");
   });
 });
