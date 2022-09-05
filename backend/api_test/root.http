@@ -1,2 +1,11 @@
-### 
+### Get /user
 GET http://localhost:8000/user
+
+
+### Create a new user
+POST http://localhost:8000/user
+Content-Type: application/json
+
+{
+    "name": "Hello"
+}

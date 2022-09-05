@@ -1,0 +1,15 @@
+### Register a new user.
+POST http://localhost:8000/register
+Content-Type: application/json
+
+{
+    "first_name": "Hasibur",
+    "last_name": "Rahman",
+    "username": "hasiburdev",
+    "email": "hasiburdev@gmail.com",
+    "password": "123456789",
+    "gender": "male",
+    "birth_year": 2001,
+    "birth_month": 11,
+    "birth_day": 1
+}
