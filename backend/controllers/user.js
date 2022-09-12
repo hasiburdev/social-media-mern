@@ -74,7 +74,7 @@ exports.createUser = async (req, res) => {
     const newUser = await user.save();
     const emailVerificationToken = generateToken({ id: newUser._id }, "30m");
     const emailActivationUrl = `${process.env.BASE_URL}/activate/${emailVerificationToken}`;
-    sendVerificationEmail(
+    await sendVerificationEmail(
       newUser.email,
       newUser.first_name,
       emailActivationUrl
