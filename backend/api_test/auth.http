@@ -6,10 +6,24 @@ Content-Type: application/json
     "first_name": "Hasibur",
     "last_name": "Rahman",
     "username": "hasiburdev",
-    "email": "heveyad852@iunicus.com",
+    "email": "test23@iunicus.com",
     "password": "123456789",
     "gender": "male",
     "birth_year": 2001,
     "birth_month": 11,
     "birth_day": 1
+}
+
+
+### Activate Email
+GET http://localhost:8000/activate/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzMzI5ZDFkMDVhNzA1ZmY5NmRhOGZmOSIsImlhdCI6MTY2NDI2MTQwNSwiZXhwIjoxNjY0MjYzMjA1fQ.R-wgAwKSRwEwe7dhW0nnftTLZneoNupe_sxt45s26Zs
+
+
+### Login User
+POST http://localhost:8000/login 
+Content-Type: application/json
+
+{
+    "email": "",
+    "password": "",
 }
